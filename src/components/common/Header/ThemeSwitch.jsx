@@ -8,10 +8,10 @@ function ThemeSwitch() {
  
 
   return (
-    <div className='flex justify-between items-center gap-5 font-normal cursor-pointer' onClick={handleToggle}>
+    <div className='flex items-center gap-1 md:gap-5 font-normal cursor-pointer' onClick={handleToggle}>
       {!isDark && <img src={moonLight} alt="moon icon" />}
       {isDark && <img src={moonDark} alt="moon icon" />}
-      <p className='text-xl' style={{color: isDark && "white"}}> Dark Mode  </p>
+      <p className='md:text-xl'> {!isDark ? 'Dark Mode' : 'Light Mode'}  </p>
     </div>
   )
 }

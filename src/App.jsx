@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useState, createContext, useContext } from "react"; 
+import { useState, createContext, useContext } from "react";
 import Home from "./pages/Home";
 
 export const MyContext = createContext();
@@ -14,18 +14,31 @@ function App() {
   useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())
-      .then((data) => {setCountries(data)})
+      .then((data) => {
+        setCountries(data);
+        setfilteredCountries(data);
+      })
       .catch((err) => console.log(err));
   }, []);
 
+  const [filteredCountries, setfilteredCountries] = useState(countries);
+
   return (
-    <section className="bg-lightModeBg" style={{backgroundColor: isDark && 'hsl(207, 26%, 17%)', color: isDark && 'white'}}>
-      <MyContext.Provider value={{
-        isDark,
-        handleToggle,
-        countries,
-        setCountries
+    <section
+      className="bg-lightModeBg" style={{
+        backgroundColor: isDark && 'hsl(207, 26%, 17%)',
+        color: isDark && 'hsl(0, 0%, 100%)'
       }}>
+      <MyContext.Provider
+        value={{
+          isDark,
+          handleToggle,
+          countries,
+          filteredCountries,
+          setfilteredCountries,
+          setCountries,
+        }}
+      >
         <Home />
       </MyContext.Provider>
     </section>

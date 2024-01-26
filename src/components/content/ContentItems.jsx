@@ -2,14 +2,15 @@ import React, { useContext, useEffect, useState } from "react";
 import { MyContext } from "../../App";
 
 function ContentItems() {
-  const {countries} = useContext(MyContext);
+  const {filteredCountries} = useContext(MyContext);
  
 
   return (
-    <section className="flex flex-wrap justify-between gap-y-14  px-32">
-      {countries.map((country) => (
-        <div className="w-72 bg-white rounded-lg overflow-hidden shadow-2xl">
-          <div className="h-44">
+    // px-32
+    <section className="container mx-auto px-5 xsm:px-16 flex flex-wrap md:justify-between gap-y-14 justify-center">
+      {filteredCountries.map((country) => (
+        <div className="xsm:w-72 sm:w-96 md:w-72 rounded-lg overflow-hidden shadow-2xl">
+          <div className="smh-60 md:h-44">
             <img src={country.flags.svg} alt="" className="h-full w-full object-cover" />
           </div>
 
