@@ -28,9 +28,10 @@ function SearchBox() {
   return (
     <form
       action=""
-      className="h-10 md:w-[30%] rounded-md shadow-lg border-2 flex items-center overflow-hidden"
+      className="h-10 md:w-[30%] rounded-lg shadow-inner flex items-center overflow-hidden"
+      style={{backgroundColor: isDark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)'}}
     >
-      <div className="h-full w-16 flex items-center justify-center">
+      <div className="h-full w-16 flex items-center justify-center bg-inherit">
         <img src={serachIcon} alt="" />
       </div>
 

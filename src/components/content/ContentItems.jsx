@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { MyContext } from "../../App";
 
 function ContentItems() {
-  const {filteredCountries} = useContext(MyContext);
+  const {filteredCountries, isDark} = useContext(MyContext);
  
 
   return (
@@ -14,7 +14,8 @@ function ContentItems() {
             <img src={country.flags.svg} alt="" className="h-full w-full object-cover" />
           </div>
 
-          <div className="px-4 py-3">
+          <div className="px-4 py-3" 
+          style={{ backgroundColor: isDark && " hsl(209, 23%, 22%)" }}>
             <p className="text-xl font-semibold mb-3">{country.name}</p>
             <p><span className="font-medium">Poupulation:</span> { country.population }</p>
             <p><span className="font-medium">Region:</span> { country.region }</p>

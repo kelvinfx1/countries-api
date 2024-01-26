@@ -25,9 +25,9 @@ function App() {
 
   return (
     <section
-      className="bg-lightModeBg" style={{
-        backgroundColor: isDark && 'hsl(207, 26%, 17%)',
-        color: isDark && 'hsl(0, 0%, 100%)'
+       style={{
+        backgroundColor: isDark ? 'hsl(207, 26%, 17%)': 'hsl(0, 0%, 98%)',
+        color: isDark && 'hsl(0, 0%, 98%)'
       }}>
       <MyContext.Provider
         value={{
