@@ -1,17 +1,17 @@
 import React, { useContext } from 'react'
-import moonLight from '../../../assets/moonLight.svg'
-import moonDark from '../../../assets/moonDark.svg' 
+import sunIcon from '../../../assets/sunIcon.svg'
+import moonIcon from '../../../assets/moonIcon.svg' 
 import { MyContext } from '../../../App'
 
 function ThemeSwitch() {
-  const {isDark, handleToggle} = useContext(MyContext)
+  const {darkMode, handleToggle} = useContext(MyContext)
  
 
   return (
-    <div className='flex items-center gap-1 md:gap-5 font-normal cursor-pointer' onClick={handleToggle}>
-      {!isDark && <img src={moonLight} alt="moon icon" />}
-      {isDark && <img src={moonDark} alt="moon icon" />}
-      <p className='md:text-xl'> {!isDark ? 'Dark Mode' : 'Light Mode'}  </p>
+    <div className='xsm:text-sm flex items-center gap-1 md:gap-5 font-normal cursor-pointer' onClick={handleToggle}>
+      {!darkMode && <img src={moonIcon} alt="moon icon" />}
+      {darkMode && <img src={sunIcon} alt="moon icon" />}
+      <p className='md:text-xl dark:text-white'> {!darkMode ? 'Dark Mode' : 'Light Mode'}  </p>
     </div>
   )
 }

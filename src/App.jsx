@@ -5,14 +5,16 @@ import Home from "./pages/Home";
 export const MyContext = createContext();
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
   function handleToggle() {
-    setIsDark(!isDark);
+    setDarkMode(!darkMode);
   }
+
+  // const dataPath = '/data.json';
 
   const [countries, setCountries] = useState([]);
   useEffect(() => {
-    fetch("/data.json")
+    fetch('/data.json')
       .then((res) => res.json())
       .then((data) => {
         setCountries(data);
@@ -23,15 +25,12 @@ function App() {
 
   const [filteredCountries, setfilteredCountries] = useState(countries);
 
+
   return (
-    <section
-       style={{
-        backgroundColor: isDark ? 'hsl(207, 26%, 17%)': 'hsl(0, 0%, 98%)',
-        color: isDark && 'hsl(0, 0%, 98%)'
-      }}>
+    <section className={`${darkMode && "dark"}`}>
       <MyContext.Provider
         value={{
-          isDark,
+          darkMode,
           handleToggle,
           countries,
           filteredCountries,
@@ -39,6 +38,7 @@ function App() {
           setCountries,
         }}
       >
+        
         <Home />
       </MyContext.Provider>
     </section>

@@ -4,7 +4,7 @@ import { MyContext } from "../../../App";
 
 function SearchBox() {
   const {
-    isDark,
+    darkMode,
     countries,
     setCountries,
     filteredCountries,
@@ -28,9 +28,7 @@ function SearchBox() {
   return (
     <form
       action=""
-      className="h-10 md:w-[30%] rounded-lg shadow-inner flex items-center overflow-hidden"
-      style={{backgroundColor: isDark ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)'}}
-    >
+      className="h-12 md:w-[36%] rounded-lg shadow-xl flex items-center overflow-hidden bg-lightModeBg dark:bg-darkModeElements">
       <div className="h-full w-16 flex items-center justify-center bg-inherit">
         <img src={serachIcon} alt="" />
       </div>
@@ -38,7 +36,7 @@ function SearchBox() {
       <input
         type="text"
         placeholder="Search for a country..."
-        className="h-full w-full outline-none text-xl bg-inherit"
+        className="h-full w-full outline-none text-xl bg-inherit text-black dark:text-white"
         value={inputValue}
         onChange={(e) => setInputValue(e.currentTarget.value)}
       />

@@ -25,6 +25,7 @@ export default {
   
   },
   plugins: [require("daisyui")],
+  darkMode: 'class',
 }
 // 34,46,55
 // 43,55,67

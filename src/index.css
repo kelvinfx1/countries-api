@@ -10,6 +10,19 @@
 
 } */
 
+html, body {
+    min-width: 360px;
+
+} 
+* {
+    @apply transition-colors duration-100;
+}
 .somr {
     color: rgb(90, 90, 90);
 }
+
+
+ /*<div className="bg-red-400 dark:bg-darkModeBg dark:text-white">
+          <p>Lets see</p>
+        </div>
+        <button className="btn " onClick={toggleDarkMode}>Click</button> */
