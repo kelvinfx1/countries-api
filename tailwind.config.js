@@ -18,6 +18,7 @@ export default {
        colors: {
         lightModeBg: 'hsl(0, 0%, 100%)',
         darkModeBg: 'hsl(207, 26%, 17%)',
+        graybg:'hsl(400,47%,27%)',
         darkModeElements: ' hsl(209, 23%, 22%)' 
         
        }
