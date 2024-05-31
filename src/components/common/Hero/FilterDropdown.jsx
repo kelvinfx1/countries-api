@@ -52,7 +52,7 @@ function FilterDropdown() {
   return (
     <section className="relative text-xl ">
       <div
-        className="bg-lightModeBg dark:bg-darkModeElements h-12 w-56 translate-x-52 lg:translate-x-1 lg:w-96 px-5 flex items-center justify-between rounded-lg shadow-xl cursor-pointer"
+        className="bg-lightModeBg dark:bg-darkModeElements h-12 w-56 translate-x-20 lg:translate-x-1 lg:w-96 px-5 flex items-center justify-between rounded-lg shadow-xl cursor-pointer"
         onClick={handleIsOpen}
       >
         {/* 👇If current filter is equal to All display "Filter by Region" otherwise display the value of the currentFilter state */}
