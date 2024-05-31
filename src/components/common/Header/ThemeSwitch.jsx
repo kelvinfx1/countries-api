@@ -8,10 +8,10 @@ function ThemeSwitch() {
  
 
   return (
-    <div className='xsm:text-sm flex items-center gap-1 md:gap-5 font-normal cursor-pointer' onClick={handleToggle}>
-      {!darkMode && <img src={moonIcon} alt="moon icon" />}
-      {darkMode && <img src={sunIcon} alt="moon icon" />}
-      <p className='md:text-xl dark:text-white'> {!darkMode ? 'Dark Mode' : 'Light Mode'}  </p>
+    <div className='xsm:text-sm flex items-center gap-1 md:gap-5 font-normal cursor-pointer ' onClick={handleToggle}>
+      {!darkMode && <img src={moonIcon} alt="moon icon"  className='h-[50px] w-[80%]'/>}
+      {darkMode && <img src={sunIcon} alt="moon icon" className='h-[50px] w-[80%]' />}
+      {/* <p className='md:text-xl dark:text-white'> {!darkMode ? 'Dark Mode' : 'Light Mode'}  </p> */}
     </div>
   )
 }

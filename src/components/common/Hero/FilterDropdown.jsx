@@ -50,9 +50,9 @@ function FilterDropdown() {
 
 
   return (
-    <section className="relative text-xl">
+    <section className="relative text-xl ">
       <div
-        className="bg-lightModeBg dark:bg-darkModeElements h-12 w-56 lg:w-96 px-5 flex items-center justify-between rounded-lg shadow-xl cursor-pointer"
+        className="bg-lightModeBg dark:bg-darkModeElements h-12 w-56 translate-x-52 lg:translate-x-1 lg:w-96 px-5 flex items-center justify-between rounded-lg shadow-xl cursor-pointer"
         onClick={handleIsOpen}
       >
         {/* 👇If current filter is equal to All display "Filter by Region" otherwise display the value of the currentFilter state */}
@@ -65,9 +65,9 @@ function FilterDropdown() {
 
       {/* 👇regions array mapped and used as key also since all the region have uniqe names. region is also passed to the  filterByRegion function */}
       {isOpen && (
-        <ul className="w-full absolute bg-lightModeBg dark:bg-darkModeBg rounded-lg shadow-xl mt-2">
+        <ul className="w-56 lg:w-full lg:translate-x-1 translate-x-52 absolute bg-darkModeBg dark:bg-lightModeBg rounded-lg shadow-xl mt-2">
           {regions.map((region) => (
-            <li key={region} onClick={() => filterByRegion(region)} className="cursor-pointer py-3 pl-5 text-black dark:text-white">
+            <li key={region} onClick={() => filterByRegion(region)} className="cursor-pointer py-3 pl-5 text-white dark:text-black font-semibold">
               {region}
             </li>
           ))}

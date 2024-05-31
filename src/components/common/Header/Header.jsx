@@ -11,7 +11,7 @@ function Header() {
         className="container mx-auto px-5 py-3 font-medium md:py-6 flex justify-between whitespace-nowrap"
         
       >
-        <p className="md:text-xl dark:text-white">Where in the world?</p>
+        <p className="md:text-3xl dark:text-white font-extrabold ">Where in the world?</p>
         <ThemeSwitch />
       </div>
     </section>

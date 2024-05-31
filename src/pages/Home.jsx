@@ -10,7 +10,7 @@ function Home() {
   useEffect(() => {
     setTimeout(() => {
       setshowSplash(false);
-    }, 2000);
+    }, 5000);
     // return () => clearTimeout(timeout);
   }, []);
 
@@ -18,13 +18,13 @@ function Home() {
     <>
       {showSplash ? (
         <SpalshScreen />
-      ) : (
-        <section className="bg-lightModeBg dark:bg-darkModeBg">
+      ) : ( 
+        <section className="bg-lightModeBg dark:bg-darkModeBg h-full">
           <Header />
           <Hero />
           <ContentItems />
         </section>
-      )}
+       )} 
     </>
   );
 }

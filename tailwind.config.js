@@ -16,10 +16,10 @@ export default {
     },
     extend: {
        colors: {
-        lightModeBg: 'hsl(0, 0%, 100%)',
-        darkModeBg: 'hsl(207, 26%, 17%)',
+        lightModeBg: '#f2f2f2',
+        darkModeBg: '#020a32',
         graybg:'hsl(400,47%,27%)',
-        darkModeElements: ' hsl(209, 23%, 22%)' 
+        darkModeElements: '#010723' 
         
        }
     },

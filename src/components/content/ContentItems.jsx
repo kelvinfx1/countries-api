@@ -7,7 +7,7 @@ function ContentItems() {
 
   return (
     // px-32 xsm:px-16
-    <section className="container mx-auto px-5 grid gap-14 xsm:grid-cols-2 xsm:gap-10 md:grid-cols-3 lg:grid-cols-4">
+    <section className="container mx-auto px-5 grid gap-14 xsm:grid-cols-2 xsm:gap-10 md:grid-cols-3 lg:grid-cols-4 h-full">
       {/*   md:justify-between justify-center lg:bg-red-300 */}
       {filteredCountries.map((country) => (
         <div className="overflow-hidden shadow-2xl rounded-lg bg-white dark:bg-darkModeBg dark:text-white" key={country.name}>

@@ -27,7 +27,7 @@ function App() {
 
 
   return (
-    <section className={`${darkMode && "dark"}`}>
+    <section className={`${darkMode && "dark"} `}>
       <MyContext.Provider
         value={{
           darkMode,
